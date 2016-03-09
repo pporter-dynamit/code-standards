@@ -1,0 +1,12 @@
+{
+  "plugins": ["github", "edit-link", "prism", "-highlight"],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/dynamit/code-standards/tree/master",
+      "label": "Edit This Page"
+    },
+    "github": {
+      "url": "https://github.com/dynamit/code-standards/"
+    }
+  }
+}

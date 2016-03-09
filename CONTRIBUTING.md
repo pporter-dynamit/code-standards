@@ -1,0 +1,39 @@
+# Contributing
+
+A Dynamit we like to jam on ideas and move forward together. The way we code evolves, and so should our standards. Here are the guidelines for contributing to the coding standards.
+
+## Team-think
+
+Any standard should be at least mostly agreed upon by the team(s) that it affects. No rogue developers. If you have an idea for a new standard or update to an existing standard, solicit feedback and work with the team to get alignment.
+
+These standards are meant to be a baseline for development - to smooth the friction of multiple developers context-switching between projects. Agreement amongst the team is key.
+
+However, these standards are not meant to be rigid. Resist the urge to overly prescribe development practices, as that inhibit autonomy and innovation.
+
+## Setup
+
+We use [Gitbook](http://gitbook) to publish our standards. The various build steps are scripted for convenience.
+
+Initial setup:
+
+```
+npm run prepare
+```
+
+Run local server and recompile changes on the fly
+
+```
+npm run server
+```
+
+Building the documentation:
+
+```
+npm run build
+```
+
+Publish:
+
+```
+npm run publish
+```
