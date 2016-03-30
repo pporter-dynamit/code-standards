@@ -100,7 +100,6 @@ Comments should be brief and explain the "Why?", not the "How?". Additionally, t
 ---
 
 # Footnotes
-{: .no_toc .h5 }
 
-[^1]: The pitfalls of [Macro Parenthesis](https://docs.freebsd.org/info/cpp/cpp.info.Macro_Parentheses.html).
-[^2]: [Dependency Injection in iOS](http://www.objc.io/issues/15-testing/dependency-injection/).
+[^1]: The pitfalls of [Macro Parenthesis](https://docs.freebsd.org/info/cpp/cpp.info.Macro_Parentheses.html)
+[^2]: [Dependency Injection in iOS](http://www.objc.io/issues/15-testing/dependency-injection/)

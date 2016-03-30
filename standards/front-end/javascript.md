@@ -446,7 +446,7 @@ export default Person;
 
 # Vendor Libraries
 
-Due to ever-increasing support for newer, more powerful versions of ECMAScript and standard browser APIs, we no longer need to rely on libraries for cross-browser compatibility, as much. Take the time to consider whether or not a project really needs to include a library for cross-browser compatibility.[^you-might-not-need-jquery]
+Due to ever-increasing support for newer, more powerful versions of ECMAScript and standard browser APIs, we no longer need to rely on libraries for cross-browser compatibility, as much. Take the time to consider whether or not a project really needs to include a library for cross-browser compatibility.[^1]
 
 ## jQuery
 
@@ -490,7 +490,7 @@ $nav.removeClass('is-active');
 
 # Transpiler
 
-We use [Babel](http://babeljs.io/) to transpile our forward-looking code into something that can be run today in current browsers. A transpiler was chosen because it follows the ECMAScript standard without adding more to the language, which keeps the learning curve minimal. Babel was chosen, specifically, because it has the best coverage[^es6-compatibility-table] for the latest specification and it works well with the rest of our tools.
+We use [Babel](http://babeljs.io/) to transpile our forward-looking code into something that can be run today in current browsers. A transpiler was chosen because it follows the ECMAScript standard without adding more to the language, which keeps the learning curve minimal. Babel was chosen, specifically, because it has the best coverage[^2] for the latest specification and it works well with the rest of our tools.
 
 ## Caveats
 
@@ -559,7 +559,6 @@ Read the [ECMAScript 2015 spec](http://www.ecma-international.org/ecma-262/6.0/i
 ---
 
 # Footnotes
-{: .no_toc .h5 }
 
-[^you-might-not-need-jquery]: [You Might Not Need jQuery](http://youmightnotneedjquery.com/)
-[^es6-compatibility-table]: [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/)
+[^1]: [You Might Not Need jQuery](http://youmightnotneedjquery.com/)
+[^2]: [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/)
