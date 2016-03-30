@@ -20,19 +20,19 @@ Initial setup (run once locally):
 npm run prepare
 ```
 
-Run local server and recompile changes on the fly
+Run local server and recompile changes on the fly (for local devlopment):
 
 ```
-npm run server
+npm run serve
 ```
 
-Building the documentation:
+Building the documentation (to just produce build artifacts):
 
 ```
 npm run build
 ```
 
-Publish:
+Publish (build + deploy):
 
 ```
 npm run publish
