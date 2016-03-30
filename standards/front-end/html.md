@@ -1,50 +1,116 @@
 # HTML
 
-## Formatting
-
-- Use hard-tab indentation.
-- Only use lowercase characters for element names and attributes.
-- Nested block-level elements should be indented once.
-- Don't use trailing slashes for self-closing elements. E.g. `<br>`, `<img>`, `<input>`.
-- Enclose attribute values with double quotes.
-- Omit values for boolean attributes (not including custom attributes). If you can't, the value must be empty or equal to the name of the attribute. E.g. `<input required>` rather than `<input required="required">`.
+Use the HTML 5 doctype
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Example</title>
-	<link rel="stylesheet" href="//site.tld/stylesheet.css">
-</head>
-<body>
-	<div class="foo">
-		<p>Lorem ipsum dolor sit amet, consectetur. Facere!</p>
-	</div>
-	<script src="//cdn.tld/script.js"></script>
-</body>
-</html>
+<!doctype html>
 ```
 
-## Style
-- Always define a doctype to enforce standards mode and a more consistent rendering.
-- Use UTF-8 with the charset meta tag and don't use entity references except for characters with special meanings.
-- Don't include the `type` attribute when including stylesheets and scripts.
-- Use scheme-relative URLs (omit http/https).
-- Feel free to separate chunks of HTML with a blank line.
+Declare a [language attribute](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element) on the opening `<html>` tag.
 
-## Attribute Order
+```html
+<html lang="en">
+```
 
-For the sake of consistency and quick readability, write your attributes in this order:
+Define explicit character encoding to ensure proper rendering of content.
 
-- `class`
-- `id`
-- `name`
-- `type`
-- `*`
-- `role`
-- `aria-*`
+```html
+<meta charset="utf-8">
+```
 
-## Semantics
+Nest tags. Use soft tabs, 2 spaces
+
+```html
+<!-- bad -->
+<ul>
+	<li><a href="...">Lorem ipsum</a></li>
+</ul>
+
+<!-- good -->
+<ul>
+  <li>
+    <a href="...">Lorem ipsum</a>
+  </li>
+</ul>
+```
+
+Use lowercase for tags names and attributes.
+
+```html
+<!-- bad -->
+<IMG SRC="images/tidyman.jpg" ALT="The Tidyman">
+
+<!-- good -->
+<img src="images/tidyman.jpg" alt="The Tidyman">
+```
+
+Use double quotes for attribute values.
+
+```html
+<!-- bad -->
+<input type=text>
+
+<!-- good -->
+<input type="text">
+```
+
+Don’t omit [optional closing tags](http://www.w3.org/TR/html5/syntax.html#optional-tags).
+
+Avoid type attributes on script and stylesheet includes - `text/css` and `text/javascript` are interpreted automatically.
+
+Don't include values for [boolean attributes](https://html.spec.whatwg.org/multipage/infrastructure.html#boolean-attributes).
+
+```html
+<!-- bad -->
+<input type="checkbox" value="1" checked="checked">
+
+<!-- good -->
+<input type="checkbox" value="1" checked>
+```
+
+Use [semantic markup](http://www.adobe.com/devnet/html5/articles/semantic-markup.html).
 
 Use tags according to their purpose. For instance, don't use an `<a>` tag when a `<button>` is more appropriate. Aside from making our code more meaningful, using the correct tags has a huge benefit for accessibility.
+
+
+```html
+<!-- bad -->
+<div>Heading</div>
+<div>Paragraph copy</div>
+<a href="#" class="button">Submit</a>
+
+<!-- good -->
+<h1>Heading</h1>
+<p>Paragraph copy</p>
+<button>Submit</button>
+```
+
+## Separation of Concerns
+
+Avoid obtrusive JavaScript. JavaScript should live in `.js` files. This helps keep a clear separation of concerns and aids in code scalability and maintainability.
+
+```html
+<!-- bad -->
+<button onclick="submit()">Click Me!</button>
+```
+
+Don't rely on markup for visual formatting. (e.g. `<br>`, `<b>`, `<i>`).
+
+```html
+<!-- bad -->
+<p>
+  How much a dollar <i><b>really</b></i> cost?
+  <br>
+  The question is detrimental, paralyzin' my thoughts
+</p>
+
+<!-- good -->
+<p>
+  How much a dollar <em>really</em> cost?
+</p>
+<p>
+  The question is detrimental, paralyzin' my thoughts
+</p>
+```
+
+It's OK to use `<strong>` and `<em>` to provide semantic meaning to inline text, but ensure that the appropriate styles are defined in the stylesheet. Do not rely on `<strong>` or `<em>` for visual formatting.
