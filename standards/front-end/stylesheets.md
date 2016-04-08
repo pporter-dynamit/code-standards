@@ -49,7 +49,7 @@ $some-var: 13em;
 @mixin some-mixin { ... }
 
 .selector {
-	$_someVar: 14em;
+	$_some-var: 14em;
 }
 ```
 
@@ -189,7 +189,7 @@ Don't specify units for zero values: `padding: 0;` not `padding: 0px`
 
 Don't specify units for line-height: `line-height: 1.5` not `line-height: 24px`
 
-Avoid shorthand. Prefer clarity.
+Use shorthand sparingly. Prefer clarity.
 
 ```scss
 // bad
