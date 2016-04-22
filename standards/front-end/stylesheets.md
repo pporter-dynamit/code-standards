@@ -189,6 +189,22 @@ Don't specify units for zero values: `padding: 0;` not `padding: 0px`
 
 Don't specify units for line-height: `line-height: 1.5` not `line-height: 24px`
 
+Prefer relative units `rems` and `ems`:
+
+```scss
+// bad
+.selector {
+	font-size: 20px;
+	margin-top: 14px;
+}
+
+// good
+.selector {
+	font-size: 1.25rem;
+	margin-top: 0.7em;
+}
+```
+
 Use shorthand sparingly. Prefer clarity.
 
 ```scss
