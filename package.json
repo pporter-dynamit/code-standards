@@ -13,7 +13,7 @@
   "author": "Dynamit",
   "license": "MIT",
   "devDependencies": {
-    "gitbook-cli": "^2.1.2",
+    "gitbook-cli": "^2.1.3",
     "rimraf": "^2.5.2"
   }
 }
