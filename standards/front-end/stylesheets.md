@@ -53,7 +53,7 @@ $some-var: 13em;
 }
 ```
 
-Name you variables in a [modular way](http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-name-your-sass-variables-modularly/) - providing structure and logic.
+Name your variables in a [modular way](http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-name-your-sass-variables-modularly/) - providing structure and logic.
 
 Add modifiers to the end of the variable name.
 

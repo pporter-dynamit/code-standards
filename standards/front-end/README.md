@@ -21,24 +21,13 @@
 5. [Performance](#performance)
 6. [SEO & Meta](#seo--meta)
 7. [Accessibility](#accessibility)
-  * [Visually Hidden Text (for Screen Readers)](#visually-hide-text-but-allow-screen-readers-to-read)
-  * [Links](#links)
-  * [Skip Links/Bypass Blocks](#skip-links--bypass-blocks)
-  * [Visible Focus](#visible-focus)
-  * [Images](#images)
-  * [Headings](#headings)
-  * [Color Contrast](#color-contrast)
-  * [Tab/Focus Order](#tab-order)
-  * [Form Elements](#form-elements)
-  * [Miscellaneous](#random-tidbits)
 
 ---
 
-# Development Process
+# Purpose of Standards
+This repo contains a list of code standards for the Dynamit Front End Development team. What follows is a starting point for new developers. This is _not_ a strict set of rules, but more like guidelines. To continue to grow and innovate, we do not hold these to be all encompassing. **Do not** let this document hinder you from trying new ideas or technologies.
 
-TODO - integrate with code style guide \
-TODO - integrate front end resource doc \
-TODO - add note about these being a starting point, not the end all be all.
+# Development Process
 
 ## Version Control
 
@@ -48,23 +37,14 @@ TODO - add note about these being a starting point, not the end all be all.
 - Associate a ticket number with a commit when applicable. Should also be in the branch name.
 
 ## Code Quality
-
-- TODO - Merge with code style guide links for each section
-- TODO - add link and move to - DRY
-
-
-- TODO - move somewhere - Use IE VMS to test code (or [BrowserStack](https://www.browserstack.com))
-- TODO - move to js section of style guide - Thoroughly document code use [JSDoc](http://usejsdoc.org/) conventions
-
-## IDE
-- User editor config
+- Read through the individual pages to find more specific code quality guidelines
 
 ## Ops
 
 - Use [CodePen](https://codepen.io/) or [Web Maker](https://chrome.google.com/webstore/detail/web-maker/lkfkkhfhhdkiemehlpkgjeojomhpccnh?hl=en) to rapidly prototype ideas.
-- TODO - needs link - Use the [Front End Boilerplate]() when starting a project. Fork and submit pull requests for improvements.
-- TODO - fully document build process - Use gulp to manage the asset compilation pipeline
-- TODO - fully document build process - Use webpack for asset bundling
+- Use the [Front End Boilerplate](https://github.com/Dynamit/front-end-boilerplate) when starting a project. Fork and submit pull requests for improvements.
+- Build Process - Gulp - Use gulp to manage the asset compilation pipeline
+- Build Process - Webpack - Use webpack for asset bundling
 
 ## Preventative Maintenance
 
@@ -73,33 +53,44 @@ TODO - add note about these being a starting point, not the end all be all.
 
 # Markup
 
-- use semantic markup?
+- use semantic markup 
 - structure pages (headings, sections) in logical, linear order
-- `button type=button` outside the context of a form
+- only 1 `<h1>` per page
+- all pages must have a `<main>`
+- [Full HTML guidelines](html.html)
 
 # Style Sheets
 
-- Adhere to the [Code Style Guide](http://dynamit.github.io/code-standards/standards/front-end/stylesheets.html)
-- use Sass
+- Sass is preferred
 - use low-specificty selectors. avoid ids, tags, combining selectors, prefer classes and attr selectors
 - compose styles mobile-first. example: @media (min-width: 768px) as opposed to @media (max-width: 767px)
 - use bullet-proof font-face declaration
 
-- use BEM or ABEM, hyphen, single dash modifier with property prefixes but no parent prefix \
-- give utility classes property / module prefixes 
-TODO - make good and bad examples
+- use BEM or ABEM, hyphenated, single dash modifier with property prefixes but no parent prefix 
+```html
+<div class="teaser"></div><!-- block -->
+<div class="content-block"></div><!-- block -->
+<div class="content-block__title"></div><!-- element -->
+<div class="content-block__title -color-green"></div><!-- modifier -->
+<div class="content-block__image cover"></div><!-- global utility -->
+```
+- no double-dash modifiers `--color-green` as that will not work in IE
+- [DRY (don't repeat yourself)](https://vanseodesign.com/css/dry-principles/)
+- [Full Stylesheet Guidelines](stylesheets.html)
 
 
 # JavaScript
 
-- vanilla if possible
+- Vanilla JavaScript
 - use [axios](https://github.com/axios/axios) for ajax
-- TODO - flickityr
-- TODO - add link - use js-cookie
-- write in modules
+- For carousels/sliders, use [Flickity](https://flickity.metafizzy.co/)
+- For browser cookie getting/setting, use [js-cookie](https://github.com/js-cookie/js-cookie)
+- write in [modules](https://eloquentjavascript.net/10_modules.html)
 - prefer libraries to full-blown frameworks
 - write [modern javascript](https://babeljs.io/) when you can
-- keep bundles small (< 50k), consider [lazy-loading](https://webpack.js.org/guides/lazy-loading) pages / components
+- keep bundles small (< 50k), consider [lazy-loading](https://webpack.js.org/guides/lazy-loading) pages / components (or [chunking](https://medium.com/react-weekly/code-chunking-with-webpack-a-pragmatic-approach-e17e8bcc6453) with webpack)
+- Thoroughly document code use [JSDoc](http://usejsdoc.org/) conventions
+- [Full JavaScript Guidelines](javascript.html)
 
 # Performance
 
@@ -130,108 +121,71 @@ Include a canonical url tag on each page. Use [trailing slashes](http://googlewe
 - include a retina favicon https://daringfireball.net/2013/01/retina_favicons
 - add schema.org tags
 
+# Testing
+* Use IE VMS to test code (or [BrowserStack](https://www.browserstack.com))
+
 # Accessibility
-## Visually Hide Text, But Allow Screen Readers to Read
+[Full documentation](accessibility.html)
 
-```css
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: rect(0,0,0,0);
-  border: 0;
-}
-```
-
-## Links
-- Avoid using ALL CAPS (even `text-transform: uppercase` can make it sound like a screen reader is yelling at you)
-- Use visually hidden spans to add additonal context
-
-```html
-<!-- not much context -->
-<a href="tel:18885555555">1-888-555-5555</a>
-
-<!-- text is hidden visually, but screen reader can read it -->
-<a href="tel:18885555555"><span class="visually-hidden">For more information on XYZ Corp. call</span> 1-888-555-5555</a>
-```
-
-- Don't use URLs as only text
-- When a link will do something unexpected, announce that to the user
-- Don't use `target="_blank"` (confusing to the user, removes back button functionality)
-- If `target="_blank"` must be used, inform the user they will be taken away from the site
-- Font icon / SVG links need to have, at the very least, complimentary text that explains the link
-- For internal actions, use `<button>`
-- For taking users away from the current page, use `<a>`
-- `<a>` must always have an `href` to pass testing
-- Don't bother using [`title`](https://www.paciellogroup.com/blog/2012/01/html5-accessibility-chops-title-attribute-use-and-abuse/)
-
-## Skip Links / Bypass Blocks
-
-Coming Soon
-
-## Visible Focus
-- [WCAG 2.4.7](http://www.w3.org/TR/2012/NOTE-UNDERSTANDING-WCAG20-20120103/navigation-mechanisms-focus-visible.html) - Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible. (Level AA)
-- Never use `outline: none`
-- Can update the outline so it looks different than default, but a visible border must be displayed
-- Common failure is using `blur()` to take off focus, instead focus on another item
-- Give your elements `:focus` wherever you have `:hover` in your CSS
-- Focus needs to be taken into account when using `.hover()`
-- Typical failures occur for dropdown navigation not shown when the user focuses on a the top level menu item
-
-## Images
-- Always have alt text of some sort
-```html
-<!-- indicates the image is decorative and does not have text in the image -->
-<img alt="" src="../..">
-
-<!-- indicates the image is decorative and does not have text in the image -->
-<img alt="This text should be descriptive/informative, but not repeat information that is already present" src="../..">
-```
-- `alt` text Should be kept under 125 characters
-- Items like charts or maps that represent a lot of information, `<caption>` or `longdesc` should be used (example needed)
-- GIFs should not have more than 3 flashes per second
-- If possible, don't play GIF until hovered over
-- Never use the filename as alt text
-
-## Headings
-- [Use semantic markup and structure your page with one](http://adrianroselli.com/2013/12/the-truth-about-truth-about-multiple-h1.html) `<h1>`
-- Think of your page as the table of contents
-- Turn off styling to test if the visual heirarchy makes sense
-- Screen readers use headings as hot key points
-
-## Color Contrast
-- #000 on #fff background is not the best for readability and can [cause eye strain](http://ux.stackexchange.com/questions/53264/dark-or-white-color-theme-is-better-for-the-eyes)
-- Ratio of 4.5:1 must be met for regular text
-- 19px and bold is 3:1, 24px and basic color is 3:1
-- Dyslexics do better with unique fonts (Comic Sans all characters are unique)
-- Automated testing tools can't judge color contrast of text over an image
-- Images with text in them need to have this contrast level and alt text equal to the text on the image
-- [Testing color contrast] (http://jxnblk.com/colorable/demos/text/)
-
-## Tab Order
-- `tabindex="0"` and `tabindex="-1"` are all that should ever be used
-- Never use `tabindex="1+"`
-- Seriously. Don't.
-- `tabindex="-1"` removes the element from the default tab order but allows you to focus on it programatically
-- `tabindex="0"` places the element in the default tab order
-- Proposal is in to deprecate any tab index that is greater than 0
-
-## Form Elements
-- All `<input>` must have `<label>` associated with them
-- Note the `name` attribute does not have to match
-```html
-<label for="theinput">Input here:</label>
-<input type="text" name="whatever" id="theinput">
-```
-
-## Random Tidbits
-- Include a `lang=` attribute on the `<html>` tag
-- Don't use `<meta name="viewport" content="user-scalable=no" />`. Users must be able to zoom
-- Take into account that users should be able to go to zoom in to 200% and have the site still work
-
-## Further Reading
-An excellent resource on accessibility for the web: [eBay MIND Patterns](http://ianmcburnie.github.io/mindpatterns/)
-
+# General Resources
+* [Dynamit Only Resource](https://docs.google.com/document/d/1iYwcqdtfH6Lv0_SBRX4HF91fqD7soP3uD1KkeyNUFD0/edit?usp=sharing)
+* Prototyping
+* * [codepen.io](https://codepen.io/)
+* * [Chrome Web Maker](https://chrome.google.com/webstore/detail/web-maker/lkfkkhfhhdkiemehlpkgjeojomhpccnh?hl=en) - local browser version of codepen (works offline)
+* Build Tools
+* * [Webpack](https://webpack.js.org/)
+* * [Gulp](https://gulpjs.com/)
+* * [Parcel](https://parceljs.org/)
+* Technologies
+* * Sass
+* * ES6
+* * Handlebars
+* * Twig
+* * Laravel
+* * Phalcon
+* * Babel
+* * NODE && NPM
+* IDE’s
+* * Sublime Text 3
+* * Atom
+* * VS Code
+* * PHPStorm
+* Mac Stuff
+* * [Alfred](https://www.alfredapp.com/)
+* * [Nice extra pull down clipboard](https://unclutterapp.com/)
+* Tools
+* * Visualize Git with Kracken
+* * Source Tree Git Manager
+* * Page Speed
+* * http://cssstats.com/http://cssstats.com/
+* * Modular Scale
+* * CSS Triangle Generator
+* * Favicon Generator
+* * Contrast Tester
+* * Keycode Info
+* * Cubic Bezier Tester
+* * CSS Gradients
+* * ASCII Generator
+* Podcasts
+* * https://play.pocketcasts.com/web/podcasts/index#/podcasts/show/7a564520-1cc3-0135-52f8-452518e2d253
+* * http://www.jupiterbroadcasting.com/
+* * https://spec.fm/podcasts/developer-tea
+* * https://developer.telerik.com/
+* * http://fitsandstarts.fm/
+* * http://founderstalk.com/
+* * https://frontendfive.codeschool.com/
+* * http://frontendhappyhour.com/
+* * http://www.fullstackradio.com/
+* * https://www.hanselminutes.com/
+* * https://devchat.tv/js-jabber//
+* * https://laravel-news.com/podcast
+* * http://www.northmeetssouth.audio/
+* * http://shoptalkshow.com/
+* * https://syntax.fm/
+* * http://bikeshed.fm/
+* * http://www.fiveminutegeekshow.com/
+* * https://laravel.com/
+* * http://threedevsandamaybe.com/
+* * http://twentypercent.fm/
+* * http://www.jupiterbroadcasting.com/show/error/
+* * http://www.ycombinator.com/
