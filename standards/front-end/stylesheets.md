@@ -263,3 +263,7 @@ header {
     background-color: #000;
 }
 ```
+
+## CSS Resources
+- [CSS Environment Variables - The Notch](https://css-tricks.com/css-environment-variables/?utm_source=ponyfoo+weekly&utm_medium=email&utm_campaign=114)
+- [Print Stylesheets](https://www.smashingmagazine.com/2018/05/print-stylesheets-in-2018/)
