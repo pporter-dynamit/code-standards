@@ -137,35 +137,36 @@ Include a canonical url tag on each page. Use [trailing slashes](http://googlewe
 * * [Gulp](https://gulpjs.com/)
 * * [Parcel](https://parceljs.org/)
 * Technologies
-* * Sass
-* * ES6
-* * Handlebars
-* * Twig
-* * Laravel
-* * Phalcon
-* * Babel
-* * NODE && NPM
+* * [Sass](https://sass-lang.com/)
+* * [ES6](http://es6-features.org/)
+* * [Handlebars](https://handlebarsjs.com/)
+* * [Twig - PHP](https://twig.symfony.com/)
+* * [Laravel - PHP](https://laravel.com/)
+* * [Phalcon - PHP](https://phalconphp.com/en/)
+* * [Babel - JS](https://babeljs.io/)
+* * [NODE && NPM](https://nodejs.org/en/)
 * IDE’s
-* * Sublime Text 3
-* * Atom
-* * VS Code
-* * PHPStorm
+* * [Sublime Text 3](https://www.sublimetext.com/3)
+* * [Atom](https://atom.io/)
+* * [VS Code](https://code.visualstudio.com/)
+* * [PHPStorm](https://www.jetbrains.com/phpstorm/)
 * Mac Stuff
 * * [Alfred](https://www.alfredapp.com/)
 * * [Nice extra pull down clipboard](https://unclutterapp.com/)
 * Tools
-* * Visualize Git with Kracken
-* * Source Tree Git Manager
-* * Page Speed
-* * http://cssstats.com/http://cssstats.com/
-* * Modular Scale
-* * CSS Triangle Generator
-* * Favicon Generator
-* * Contrast Tester
-* * Keycode Info
-* * Cubic Bezier Tester
-* * CSS Gradients
-* * ASCII Generator
+* * Visualize Git with [GitKraken](https://www.gitkraken.com/)
+* * [Source Tree Git Manager](https://www.sourcetreeapp.com/)
+* * [Page Speed](https://developers.google.com/speed/pagespeed/insights/)
+* * [CSS Stats](http://cssstats.com/http://cssstats.com/)
+* * [Parker - Stylesheet analysis tool](https://github.com/katiefenn/parker)
+* * [Modular Scale](http://www.modularscale.com/?1,50&em&1.125)
+* * CSS Triangle [Generator](http://apps.eky.hk/css-triangle-generator/)
+* * Favicon [Generator](https://realfavicongenerator.net/)
+* * Color Contrast [Tester](http://contrast-ratio.com/)
+* * [Keycode Info](http://keycode.info/)
+* * Cubic Bezier [Tester](http://cubic-bezier.com/#.17,.67,.83,.67)
+* * [CSS Gradients](https://www.grabient.com/)
+* * ASCII [Generator](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Dynamit%0A)
 * Podcasts
 * * https://play.pocketcasts.com/web/podcasts/index#/podcasts/show/7a564520-1cc3-0135-52f8-452518e2d253
 * * http://www.jupiterbroadcasting.com/
@@ -189,3 +190,78 @@ Include a canonical url tag on each page. Use [trailing slashes](http://googlewe
 * * http://twentypercent.fm/
 * * http://www.jupiterbroadcasting.com/show/error/
 * * http://www.ycombinator.com/
+* News
+* * [Hacker News](https://news.ycombinator.com/)
+* * [Product Hunt](https://www.producthunt.com/)
+* * [Hacker Noon](https://hackernoon.com/)
+* Videos
+* * [Vue JS by Jefferey Way @ Laracasts](https://laracasts.com/series/learning-vue-step-by-step)
+* * [Maintainable Scalable Applications](https://scaleyourcode.com/)
+* * [ES6 Jquery Free Tutorials from Javascript 30](https://javascript30.com/)
+* * [Uncle Bob (Martin Fowler) SOLID Design Principles](https://www.youtube.com/watch?v=QHnLmvDxGTY)
+* Tutorials
+* * [Git repos on Git Hub](http://kbroman.org/github_tutorial/pages/init.html)
+* * [https://scotch.io/](https://scotch.io/)
+* * [More GIT](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+* * [CSS Transitions and Transforms](https://robots.thoughtbot.com/transitions-and-transforms)
+* * [Sass Control Directives](http://thesassway.com/intermediate/if-for-each-while)
+* * [Dev Tools Tip Gifs](https://umaar.com/dev-tips/)
+* * [SVGs](https://css-tricks.com/using-svg/) && and [SVG Sprites](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/) && [SVG Fonts](https://css-tricks.com/icon-fonts-vs-svg/)
+* * [More SVG](https://svgontheweb.com/)
+* * [Functions](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/)
+* * [Template Literals](https://ponyfoo.com/articles/es6-template-strings-in-depth)
+* * [Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+* * [Async vs Defer](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
+* * [DOM Manipulation without jQuery](https://www.sitepoint.com/dom-manipulation-vanilla-javascript-no-jquery/)
+* * [CSS Specifics explained](https://css-tricks.com/specifics-on-css-specificity/)
+* Cheat Sheets!
+* * [Plain JS, jQuery Conversion Cheat Sheet](https://plainjs.com/)
+* * [You might not need jQuery](http://youmightnotneedjquery.com/)
+* * [Sans jQuery](https://gist.github.com/joyrexus/7307312)
+* * [Oh shit, git!](http://www.ohshitgit.com/)
+* * [Shoestring Lib](http://filamentgroup.github.io/shoestring/dist/docs/shoestring.js.html)
+* * [Accessibility](https://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-skip)
+* * [WebAIM](https://webaim.org/blog/aria-cause-solution/)
+* * [Ebay Mind Patterns](https://ebay.gitbooks.io/mindpatterns/content/)
+* * [http://youmightnotneedjqueryplugins.com/](http://youmightnotneedjqueryplugins.com/)
+* * [SOFTWARE LICENSES. AKA DONT GET SUED](https://tldrlegal.com/)
+* * [Flexbox](https://www.flexboxpatterns.com/) && [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* * [Device Resolutions](http://mydevice.io/devices/)
+* * [ALL THE DOCS EVER FOR EVERYTHING EVER PERIOD.](http://devdocs.io/)
+* * [Favicons](https://github.com/audreyr/favicon-cheat-sheet)
+* * [Mac Keyboard Shortcuts](https://support.apple.com/en-us/HT201236)
+* * [Dictionary for DEVS](https://sidewaysdictionary.com/#/)
+* Libraries
+* * Accessibility
+* * * [DT Flyout by MVM](https://stash.dynamit.com/projects/FEC/repos/dt-flyout/browse)
+* * Resources
+* * * [Google Fonts](https://fonts.google.com/)
+* * * [Typekit](https://typekit.com/)
+* * Javascript
+* * * [Window Events by Pete Droll](https://www.npmjs.com/package/windowevents)
+* * * [Drop Zone File Uploader](http://www.dropzonejs.com/)
+* * * [Vue JS Plugins](https://github.com/vuejs/awesome-vue)
+* * * [https://vuejs.org/](https://vuejs.org/)
+* * * [Moment.js](https://momentjs.com/docs/#/parsing/)
+* * * [Flickity Carousel](https://flickity.metafizzy.co/)
+* * * [Responsive Tables](https://gist.github.com/mavame/a3676391690425d992e5267e6e085541) with [TableSaw](https://github.com/filamentgroup/tablesaw)
+* * * [Bulma](https://bulma.io/)
+* Chrome Extensions
+* * [Toby (Tab Management)https://todoist.com/](https://chrome.google.com/webstore/detail/toby-for-chrome/hddnkoipeenegfoeaoibdmnaalmgkpip)
+* * [Web Developer (The best damn thing ever)](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm)
+* * [Link Checker](https://chrome.google.com/webstore/detail/check-my-links/ojkcdipcgfaekbeaelaapakgnjflfglf)
+* * [Built With](https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn)
+* * [BrowserStack](https://chrome.google.com/webstore/detail/browserstack/nkihdmlheodkdfojglpcjjmioefjahjb)
+* * [Toggl](https://chrome.google.com/webstore/detail/toggl-button-productivity/oejgccbfbmkkpaidnkphaiaecficdnfn)
+* * [JSON Viewer](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
+* * [Tab && Memory Manger](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
+* * [Window Resizer](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh)
+* * [Edit this cookie (Cookie Editor)](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en)
+* * [ColorZilla (Color picker)](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp)
+* * [Boomerang (Send emails later)](https://chrome.google.com/webstore/detail/boomerang-for-gmail/mdanidgdpmkimeiiojknlnekblgmpdll)
+* * [Link Clump (Open many links at once)](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj)
+* * [Vue.js Devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+* * [Copy all open tabs to clipboard](https://chrome.google.com/webstore/detail/copy-all-urls/djdmadneanknadilpjiknlnanaolmbfk)
+* * [One Tab (Quickly save all open tabs](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en)
+
+

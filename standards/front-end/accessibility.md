@@ -42,7 +42,7 @@ This can be wrapped in pretty much any way, but at its core, a bypass block look
 <a href="#main-content" class="skip-nav-link button" data-skip-to-content>Skip to Content</a>
 <a href="/sitemap" class="skip-nav-link button">Skip to Sitemap</a>
 ```
-with CSS the links are hidden until they have focus
+with CSS the links are hidden until they have focus (this is just the example from donatos.com)
 ```css
 .skip-nav-link, a.skip-nav-link {
   position: absolute;
