@@ -10,6 +10,7 @@ Rule | Setting
 [comma-dangle](http://eslint.org/docs/rules/comma-dangle) | "always-multiline"
 [max-len](http://eslint.org/docs/rules/max-len) | Not enforced
 
+## General Best Practices at Dynamit
 - Vanilla JavaScript
 - use [axios](https://github.com/axios/axios) for ajax
 - For carousels/sliders, use [Flickity](https://flickity.metafizzy.co/)

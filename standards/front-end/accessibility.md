@@ -18,6 +18,7 @@
 - Avoid using ALL CAPS (even `text-transform: uppercase` can make it sound like a screen reader is yelling at you)
 - All links need to have discernible text
 - - Use visually hidden spans to add additonal context
+
 ```html
 <!-- not much context -->
 <a href="tel:18885555555">1-888-555-5555</a>
@@ -38,11 +39,14 @@
 
 ## Skip Links / Bypass Blocks
 This can be wrapped in pretty much any way, but at its core, a bypass block looks like this:
+
 ```html
 <a href="#main-content" class="skip-nav-link button" data-skip-to-content>Skip to Content</a>
 <a href="/sitemap" class="skip-nav-link button">Skip to Sitemap</a>
 ```
+
 with CSS the links are hidden until they have focus (this is just the example from donatos.com)
+
 ```css
 .skip-nav-link, a.skip-nav-link {
   position: absolute;
@@ -65,6 +69,7 @@ with CSS the links are hidden until they have focus (this is just the example fr
   text-align: center;
 }
 ```
+
 In the above, when a user clicks "Skip to Content" they will be focused on the `<main>` on the page (with `id="main-content"`). This helps a user because they won't need to go through the full navigation each page refresh
 
 ## Visible Focus
@@ -78,15 +83,18 @@ In the above, when a user clicks "Skip to Content" they will be focused on the `
 
 ## Images
 - Always have alt text of some sort
+
 ```html
-<!-- screen reader will attempt to read the src name -->
+<!-- BAD: screen reader will attempt to read the src name -->
 <img src="../images/big-ol-dog.png">
-<!-- indicates the image is decorative and does not have text in the image -->
+
+<!-- GOOD: indicates the image is decorative and does not have text in the image -->
 <img alt="" src="../..">
 
-<!-- the image alt text will be read by the screen reader -->
+<!-- GOOD: the image alt text will be read by the screen reader -->
 <img alt="This text should be descriptive/informative, but not repeat information that is already present" src="../..">
 ```
+
 - `alt` text should be kept under [125 characters](https://www.washington.edu/accessit/print.html?ID=1257)
 - Items like charts or maps that represent a lot of information, `<caption>` or `longdesc` should be used
 - GIFs should not have more than 3 flashes per second (higher rate could trigger siezures)
@@ -109,7 +117,7 @@ In the above, when a user clicks "Skip to Content" they will be focused on the `
 - Screen readers can use headings as hot key points (see Voiceover [Web Rotor](http://etc.usf.edu/techease/4all/vision/how-do-i-use-webrotor-in-voiceover/))
 
 ## Color Contrast
-- #000 on #fff background is not the best for readability and can [cause eye strain](http://ux.stackexchange.com/questions/53264/dark-or-white-color-theme-is-better-for-the-eyes)
+- hex codes of 000 on FFF background is not the best for readability and can [cause eye strain](http://ux.stackexchange.com/questions/53264/dark-or-white-color-theme-is-better-for-the-eyes)
 - Ratio of 4.5:1 must be met for regular text
 - 19px and bold is 3:1, 24px and basic color is 3:1
 - Dyslexics do better with unique fonts (Comic Sans all characters are unique)
@@ -131,9 +139,9 @@ In the above, when a user clicks "Skip to Content" they will be focused on the `
 - The `for` should link to an input `id`
 - When possible, wrap the `input` with the label itself
 ```html
-<label for="theinput">
-  Input here:
-  <input type="text" name="whatever" id="theinput">
+<label for="firstNameInput">
+    First Name:
+    <input type="text" name="firstName" id="firstNameInput">
 </label>
 ```
 
