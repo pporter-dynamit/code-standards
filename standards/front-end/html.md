@@ -72,6 +72,7 @@ Use [semantic markup](http://www.adobe.com/devnet/html5/articles/semantic-markup
 
 Use tags according to their purpose. For instance, don't use an `<a>` tag when a `<button>` is more appropriate. Aside from making our code more meaningful, using the correct tags has a huge benefit for accessibility.
 
+Button actions stay on the page, while anchors take the user to a different page.
 
 ```html
 <!-- bad -->
@@ -101,6 +102,8 @@ Don't rely on markup for visual formatting. (e.g. `<br>`, `<b>`, `<i>`).
 <p>
   How much a dollar <i><b>really</b></i> cost?
   <br>
+  <br>
+  <br>
   The question is detrimental, paralyzin' my thoughts
 </p>
 
@@ -113,4 +116,4 @@ Don't rely on markup for visual formatting. (e.g. `<br>`, `<b>`, `<i>`).
 </p>
 ```
 
-It's OK to use `<strong>` and `<em>` to provide semantic meaning to inline text, but ensure that the appropriate styles are defined in the stylesheet. Do not rely on `<strong>` or `<em>` for visual formatting.
+It's OK to use `<strong>` and `<em>` to provide semantic meaning to inline text, but ensure that the appropriate styles are defined in the stylesheet. Do not rely on `<strong>` or `<em>` for visual formatting. No adding of classes to `<strong>` or `<em>`.

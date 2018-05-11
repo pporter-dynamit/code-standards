@@ -53,7 +53,7 @@ $some-var: 13em;
 }
 ```
 
-Name you variables in a [modular way](http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-name-your-sass-variables-modularly/) - providing structure and logic.
+Name your variables in a [modular way](http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-name-your-sass-variables-modularly/) - providing structure and logic.
 
 Add modifiers to the end of the variable name.
 
@@ -189,7 +189,7 @@ Don't specify units for zero values: `padding: 0;` not `padding: 0px`
 
 Don't specify units for line-height: `line-height: 1.5` not `line-height: 24px`
 
-Prefer relative units `rems` and `ems`:
+Prefer relative units `rems` and `ems`, but leave them out of breakpoints:
 
 ```scss
 // bad
@@ -263,3 +263,7 @@ header {
     background-color: #000;
 }
 ```
+
+## CSS Resources
+- [CSS Environment Variables - The Notch](https://css-tricks.com/css-environment-variables/?utm_source=ponyfoo+weekly&utm_medium=email&utm_campaign=114)
+- [Print Stylesheets](https://www.smashingmagazine.com/2018/05/print-stylesheets-in-2018/)
