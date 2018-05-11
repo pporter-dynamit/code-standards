@@ -189,7 +189,7 @@ Don't specify units for zero values: `padding: 0;` not `padding: 0px`
 
 Don't specify units for line-height: `line-height: 1.5` not `line-height: 24px`
 
-Prefer relative units `rems` and `ems`:
+Prefer relative units `rems` and `ems`, but leave them out of breakpoints:
 
 ```scss
 // bad

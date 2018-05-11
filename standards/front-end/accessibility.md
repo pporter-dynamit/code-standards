@@ -100,6 +100,7 @@ In the above, when a user clicks "Skip to Content" they will be focused on the `
 
 <!-- will read the alt text which reflects the text on the image -->
 <img src="../my-great-coupon.jpg" alt="Buy one pizza get one free. Starts at $8.99">
+```
 
 ## Headings
 - [Use semantic markup and structure your page with one](http://adrianroselli.com/2013/12/the-truth-about-truth-about-multiple-h1.html) `<h1>`
@@ -126,7 +127,7 @@ In the above, when a user clicks "Skip to Content" they will be focused on the `
 
 ## Form Elements
 - All `<input>` must have `<label>` associated with them
-- The `name` attribute does not have to match
+- The `name` attribute should not match `id`
 - The `for` should link to an input `id`
 - When possible, wrap the `input` with the label itself
 ```html
