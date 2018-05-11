@@ -1,11 +1,5 @@
 # Front-end Code Standards
 
-* [HTML](html.html)
-* [Stylesheets](stylesheets.html)
-* [JavaScript](javascript.html)
-
-# Dynamit's Front-end Playbook
-
 ---
 
 # Table of Contents
@@ -20,7 +14,9 @@
 4. [JavaScript](#javascript)
 5. [Performance](#performance)
 6. [SEO & Meta](#seo--meta)
-7. [Accessibility](#accessibility)
+7. [Testing](#testing)
+8. [Accessibility](#accessibility)
+9. [General Resources](#general-resources)
 
 ---
 
@@ -123,6 +119,9 @@ Include a canonical url tag on each page. Use [trailing slashes](http://googlewe
 
 # Testing
 * Use IE VMS to test code (or [BrowserStack](https://www.browserstack.com))
+* Supported 
+  * Desktop: Chrome (latest), Firefox (latest), IE 11, Edge. 
+  * Mobile: Chrome/Android 6, Mobile Safari/iOS 10.
 
 # Accessibility
 [Full documentation](accessibility.html)
