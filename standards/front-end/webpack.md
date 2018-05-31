@@ -44,3 +44,8 @@ Using the [performance](https://webpack.js.org/configuration/performance/) prope
 ## Setting Global Variables
 
 When setting anything that would need to be globabl (ir tokens) they can be created using the [DefinePlugin](https://webpack.js.org/plugins/define-plugin/#components/sidebar/sidebar.jsx)
+
+## Useful Resources
+
+- [Webpack](https://webpack.js.org/)
+- [SurviveJS - Webpack](https://survivejs.com/webpack/foreword/)
