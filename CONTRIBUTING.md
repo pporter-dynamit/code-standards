@@ -12,7 +12,7 @@ Any standard should be at least mostly agreed upon by the team(s) that it affect
 
 ## Setup
 
-We use [Gitbook](http://gitbook) to publish our standards. The various build steps are scripted for convenience.
+We use [Gitbook](https://www.npmjs.com/package/gitbook) to publish our standards. The various build steps are scripted for convenience.
 
 Initial setup (run once locally):
 
