@@ -1,30 +1,8 @@
 # React Guidelines
-_Prepared: For Dynamit, by Matt Van Meter, on 10/28/2018_
 
 Writing a single-page React.js application can have it's challenges if a good set of best practices and guidelines are not followed.
 
 This document tries to detail the best practices that have worked before on projects using React to build rich, interactive front-ends that may have complicated state management needs and user needs that will likely evolve as the project does.
-
-## Table of Contents
-
-[1. Getting Stateted](#1-getting-started)
-[1.1 Install via create-react-app](#install-via-create-react-app)
-[1.2 Choosing the correct version](#install-via-create-react-app)
-[2. JSX](#2-jsx)
-[3. Routing](#3-routing)
-[4. Managing State](#4-managing-state)
-[5. Context](#5-context)
-[6. `refs`](#6-refs)
-[7. Composition](#7-composition)
-[7.1 Render Props](#render-props)
-[7.2 HoCs](#hocs)
-[8. Forms](#8-forms)
-[9. Resources](#9-resources)
-[9.1 Articles](#articles)
-[9.2 Videos](#videos)
-[9.3 People with influence](#people-with-influence)
-[10. Accessibility](#10-accessibility)
-
 
 ## 1.  Getting Started
 
