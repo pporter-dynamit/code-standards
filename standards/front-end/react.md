@@ -171,9 +171,7 @@ export default class GreetingComponent {
   }
   ...
 }
-```
 
-```javascript
 // Good
 export default class GreetingComponent {
   state = {
@@ -193,9 +191,7 @@ export default class GreetingComponent {
   }
   ...
 }
-```
 
-```javascript
 // Good
 export default class GreetingComponent {
   static defaultProps: {
@@ -223,9 +219,7 @@ export default class GreetingComponent {
     </div>
   }
 }
-```
 
-```javascript
 // Good
 export default class GreetingComponent {
   ...
