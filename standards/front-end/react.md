@@ -104,6 +104,8 @@ const Greeting = props => {
 export default Greeting;
 ```
 
+_Note: Function components will always re-render, even if no new props were received. If you're using `React ^16.6`, you can use the [memo](https://reactjs.org/blog/2018/10/23/react-v-16-6.html#reactmemo) function to help performance._
+
 #### PropTypes for Components
 
 All components, whether stateless or stateful, should implement `PropTypes` definitions when they are able to receive props.
@@ -201,7 +203,6 @@ The `render` method of a React component can become large in some cases, and can
 When data for your component comes from `state` or `props`, be sure to [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) your data before using it in JSX.
 
 The following examples are simple, but most real-world scenarios will involve getting data from complex objects, so destructuring is best.
-
 
 ```javascript
 // Bad
