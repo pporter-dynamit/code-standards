@@ -162,24 +162,7 @@ The above component renders first `Hello, Nobody` then immediately re-renders it
 
 ES6 classes have the ability to define methods and properties on class instances. Make use of this when setting up a component by adding `state` and `defaultProps` when you need them, as opposed to setting up state or props in a `constructor`.
 
-```javascript
-// Bad
-export default class GreetingComponent {
-  constructor(props) {
-    super(props);
-    this.state = { name: 'Nobody' };
-  }
-  ...
-}
-
-// Good
-export default class GreetingComponent {
-  state = {
-    name: 'Nobody'
-  };
-  ...
-}
-```
+This leads to more readability and fewer bugs.
 
 ```javascript
 // Bad
@@ -199,9 +182,24 @@ export default class GreetingComponent {
   };
   ...
 }
-```
 
-This leads to more readability and fewer bugs.
+// Bad
+export default class GreetingComponent {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'Nobody' };
+  }
+  ...
+}
+
+// Good
+export default class GreetingComponent {
+  state = {
+    name: 'Nobody'
+  };
+  ...
+}
+```
 
 #### Destructure `state` and `props` in `render` methods
 
