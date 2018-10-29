@@ -16,6 +16,8 @@
       * [Naming Components](/standards/front-end/react.md#naming-components)
       * [Functional Components](/standards/front-end/react.md#functional-components)
       * [Class Components](/standards/front-end/react.md#class-components)
+        * [Default State and Props](/standards/front-end/react.md#default-state-and-props)
+        * [Destructure in your Render Method](/standards/front-end/react.md#destructure-in-your-render-method)
     * [Routing](/standards/front-end/react.md#routing)
     * [Managing State](/standards/front-end/react.md#managing-state)
       * [Local State](/standards/front-end/react.md#local-state)

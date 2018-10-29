@@ -194,7 +194,7 @@ export default class GreetingComponent {
 }
 ```
 
-#### Destructure `state` and `props` in `render` methods
+#### Destructure in your Render Method
 
 The `render` method of a React component can become large in some cases, and can have a lot of dependencies.
 
