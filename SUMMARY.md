@@ -11,7 +11,7 @@
       * [Install via create-react-app](/standards/front-end/react.md#install-via-create-react-app)
       * [Choosing the correct version](/standards/front-end/react.md#choosing-the-correct-version)
     * [Code Formatting](/standards/front-end/react.md#code-formatting)
-      * [`Prettier`](/standards/front-end/react.md#prettier)
+      * [Prettier and Eslint Configuration](/standards/front-end/react.md#prettier-and-eslint-configuration)
       * [JSX](/standards/front-end/react.md#jsx)
     * [Routing](/standards/front-end/react.md#routing)
     * [Managing State](/standards/front-end/react.md#managing-state)
