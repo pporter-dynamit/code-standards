@@ -169,7 +169,6 @@ export default class GreetingComponent {
       this.props.name = 'Nobody';
     }
   }
-  ...
 }
 
 // Good
@@ -177,7 +176,6 @@ export default class GreetingComponent {
   static defaultProps: {
     name: 'Nobody'
   };
-  ...
 }
 
 // Bad
@@ -186,7 +184,6 @@ export default class GreetingComponent {
     super(props);
     this.state = { name: 'Nobody' };
   }
-  ...
 }
 
 // Good
@@ -194,7 +191,6 @@ export default class GreetingComponent {
   state = {
     name: 'Nobody'
   };
-  ...
 }
 ```
 
@@ -202,12 +198,14 @@ export default class GreetingComponent {
 
 The `render` method of a React component can become large in some cases, and can have a lot of dependencies.
 
-When date from your component comes from `props` or `state`, be sure to [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) your data before using it in JSX.
+When data for your component comes from `state` or `props`, be sure to [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) your data before using it in JSX.
+
+The following examples are simple, but most real-world scenarios will involve getting data from complex objects, so destructuring is best.
+
 
 ```javascript
 // Bad
 export default class GreetingComponent {
-  ...
   render() {
     <div>
       <p>Here is a sentence that depends on {this.state.name} (a user's name).</p>
@@ -217,7 +215,6 @@ export default class GreetingComponent {
 
 // Good
 export default class GreetingComponent {
-  ...
   render() {
     const { name } = this.state;
     <div>
@@ -226,7 +223,5 @@ export default class GreetingComponent {
   }
 }
 ```
-
-The examples above are simple but some scenarios will lead to very long lines of Javascript in your JSX, which should be avoided if necessary.
 
 
