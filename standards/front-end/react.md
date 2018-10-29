@@ -85,3 +85,159 @@ Your editor likely has extension or plugins for Eslint and Prettier. To make the
   * [Eslint](https://www.jetbrains.com/help/webstorm/eslint.html)
   * [Prettier](https://prettier.io/docs/en/webstorm.html)
 
+## Components
+
+In a React application, Components are the first-class citizens that make your app work.
+
+### Naming Components
+
+Components should be named with an `U`ppercase letter to begin, and simple names should be preferred over complex names.
+
+### Functional Components
+
+Use a stateless functional component to author components that don't need to take advantage of the [React component lifecycle methods](https://reactjs.org/docs/react-component.html#the-component-lifecycle) and don't need to hold local state. In other words, if all the component needs to render is a set of _pre-determined_ data, then a function is all your need.
+
+```javascript
+import React from 'react';
+
+const Greeting = props => {
+  <h1>Hello, {props.name}!</h1>
+}
+
+export default Greeting;
+```
+
+#### PropTypes for Components
+
+All components, whether stateless or stateful, should implement `PropTypes` definitions when they are able to receive props.
+
+```javascript
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Greeting = props => {
+  <h1>Hello, {props.name}!</h1>
+}
+
+Greeting.propTypes = {
+  name: PropTypes.string.isRequired
+};
+
+export default Greeting;
+```
+
+This can be very helpful in debugging.
+
+#### Naming Functional Components
+
+Prefer to name the component as simple as possible when creating a functional component. For example, a `Button`, which is usually a candidate for a functional component over a class component, should be named `Button` instead of `ButtonComponent`.
+
+### Class Components
+
+A class component can take advantage of the lifecycle methods and local state that React's core Component class provides. Choose this type of component when you need a component to hold it's own state and/or use lifecycle hooks.
+
+```javascript
+import React, { Component } from 'react';
+
+class GreetingComponent {
+  state = {
+    name: 'Nobody'
+  };
+
+  componentDidMount() {
+    this.setState({ name: 'Matt' });
+  }
+
+  render() {
+    <h1>Hello, {this.state.name}</h1>
+  }
+}
+
+export default GreetingComponent;
+```
+
+The above component renders first `Hello, Nobody` then immediately re-renders itself and reads `Hello, Matt`.
+
+#### Default State and Props
+
+ES6 classes have the ability to define methods and properties on class instances. Make use of this when setting up a component by adding `state` and `defaultProps` when you need them, as opposed to setting up state or props in a `constructor`.
+
+```javascript
+// Bad
+export default class GreetingComponent {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'Nobody' };
+  }
+  ...
+}
+```
+
+```javascript
+// Good
+export default class GreetingComponent {
+  state = {
+    name: 'Nobody'
+  };
+  ...
+}
+```
+
+```javascript
+// Bad
+export default class GreetingComponent {
+  constructor(props) {
+    if (!props.name) {
+      this.props.name = 'Nobody';
+    }
+  }
+  ...
+}
+```
+
+```javascript
+// Good
+export default class GreetingComponent {
+  static defaultProps: {
+    name: 'Nobody'
+  };
+  ...
+}
+```
+
+This leads to more readability and fewer bugs.
+
+#### Destructure `state` and `props` first in `render` method
+
+The `render` method of a React component can become large in some cases, and can have a lot of dependencies.
+
+When date from your component comes from `props` or `state`, be sure to [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) your data before using it in JSX.
+
+```javascript
+// Bad
+export default class GreetingComponent {
+  ...
+  render() {
+    <div>
+      <p>Here is a sentence that depends on {this.state.name} (a user's name).
+    </div>
+  }
+}
+```
+
+```javascript
+// Good
+export default class GreetingComponent {
+  ...
+  render() {
+    const { name } = this.state;
+    <div>
+      <p>Here is a sentence that depends on {name} (a user's name).
+    </div>
+  }
+}
+```
+
+The examples above are simple but some scenarios will lead to very long lines of Javascript in your JSX, which should be avoided if necessary.
+
+

@@ -12,7 +12,7 @@
       * [Choosing the correct version](/standards/front-end/react.md#choosing-the-correct-version)
     * [Code Formatting](/standards/front-end/react.md#code-formatting)
       * [Prettier and Eslint Configuration](/standards/front-end/react.md#prettier-and-eslint-configuration)
-      * [JSX](/standards/front-end/react.md#jsx)
+    * [Components](/standards/front-end/react.md#components)
     * [Routing](/standards/front-end/react.md#routing)
     * [Managing State](/standards/front-end/react.md#managing-state)
       * [Local State](/standards/front-end/react.md#local-state)
