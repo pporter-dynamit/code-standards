@@ -12,7 +12,7 @@ _Note: This guide assumes you're building a client-rendered single page applicat
 Installation of React is preferred to be done through [Create React App](https://github.com/facebook/create-react-app). The [benefits](https://github.com/facebook/create-react-app#whats-included) of create-react-app are numerous, and it is the fastest way to get started working in a new project.
 
 ### Choosing the correct version
-It's important to choose the version of React fits the needs of the project the best. Typically, this is the latest stable version of [version](https://reactjs.org/versions/). You will rarely start a project that isn't using the latest stable version of React at the time.
+It's important to choose the version of React fits the needs of the project the best. Typically, this is the latest stable [version](https://reactjs.org/versions/). You will rarely start a project that isn't using the latest stable version of React at the time.
 
 When choosing modules that enhance React's core functionality, it's important to ensure they are written in a way that works with the version of React you chose.
 
