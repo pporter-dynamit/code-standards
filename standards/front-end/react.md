@@ -203,7 +203,7 @@ export default class GreetingComponent {
 
 This leads to more readability and fewer bugs.
 
-#### Destructure `state` and `props` first in `render` method
+#### Destructure `state` and `props` in `render` methods
 
 The `render` method of a React component can become large in some cases, and can have a lot of dependencies.
 
@@ -215,7 +215,7 @@ export default class GreetingComponent {
   ...
   render() {
     <div>
-      <p>Here is a sentence that depends on {this.state.name} (a user's name).
+      <p>Here is a sentence that depends on {this.state.name} (a user's name).</p>
     </div>
   }
 }
@@ -226,7 +226,7 @@ export default class GreetingComponent {
   render() {
     const { name } = this.state;
     <div>
-      <p>Here is a sentence that depends on {name} (a user's name).
+      <p>Here is a sentence that depends on {name} (a user's name).</p>
     </div>
   }
 }
