@@ -76,14 +76,11 @@ If you are not happy with the default Prettier configuration, then create a `.pr
 Your editor likely has extension or plugins for Eslint and Prettier. To make the best of these tools, install the extensions so you can take advantage of auto-code formatting, syntax highlights, etc.
 
 * Atom
-  * [Eslint](https://atom.io/packages/linter-eslint)
-  * [Prettier](https://atom.io/packages/prettier-atom)
+  * [Eslint](https://atom.io/packages/linter-eslint) / [Prettier](https://atom.io/packages/prettier-atom)
 * VSCode
-  * [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-  * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  * [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) / [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 * Webstorm
-  * [Eslint](https://www.jetbrains.com/help/webstorm/eslint.html)
-  * [Prettier](https://prettier.io/docs/en/webstorm.html)
+  * [Eslint](https://www.jetbrains.com/help/webstorm/eslint.html) / [Prettier](https://prettier.io/docs/en/webstorm.html)
 
 ## Components
 
