@@ -291,3 +291,8 @@ const App = () => (
 )
 ```
 
+## Managing State
+
+Familiarize yourself with the multiple ways of managing state in React.
+
+[Click here](https://itnext.io/react-state-management-patterns-908325dbb8f3)
