@@ -256,7 +256,7 @@ Routing should be achieved using [React Router](https://reacttraining.com/react-
 At the time of writing, Create React App does not come with React Router installed, so you must add it manually.
 
 ```
-yarn --dev react-router-dom
+yarn add --dev react-router-dom
 ```
 
 ### Scroll to top
