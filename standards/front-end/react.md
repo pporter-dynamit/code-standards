@@ -263,7 +263,7 @@ yarn --dev react-router-dom
 
 As a best practice for a SPA, ensure users are not stuck at the bottom of a page when navigating Back from a page. To achieve this, see the official docs on [scroll restoration](https://reacttraining.com/react-router/web/guides/scroll-restoration) and implement a `<ScrollToTop />` component in your project.
 
-```
+```javascript
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -290,3 +290,4 @@ const App = () => (
   </Router>
 )
 ```
+
