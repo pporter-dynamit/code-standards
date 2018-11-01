@@ -24,31 +24,22 @@ The latest stable version of React as of this writing is React version [16.6.0](
 
 Having consistent code formatting and style is essential on projects or teams of one or more developers. It can help to reduce cognitive load when switching contexts and switching between projects.
 
-We reach for [Prettier](https://prettier.io/) and [Eslint](https://eslint.org/) to ensure things like line length, variable naming conventions, and other general syntax rules are followed, and use available code editor [extensions](#step-4--install-extensions).
+We reach for [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) to ensure things like line length, variable naming conventions, and other general syntax rules are followed, and use available code editor [extensions](#step-4--install-extensions).
 
-_Note: Create React App already comes with `eslint` configured. It does not, however, (at the time of writing) come with configuration for `prettier`. We find `prettier` to be crucial in achieving the DRY principle, so we recommend it on all of our projects._
+_Note: Create React App already comes with `eslint` configured. It does not, however, (at the time of writing) come with configuration for `prettier`._
 
-### Prettier and Eslint Configuration
+### Prettier and ESLint Configuration
 
-#### Step 1: Eject from Create React App
+_Source: [Using Prettier with VS Code and Create React App](https://medium.com/technical-credit/using-prettier-with-vs-code-and-create-react-app-67c2449b9d08)_
 
-Assuming your created your application using Create React App, you will need to [eject](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-run-eject) your react application to use `prettier`.
-
-```
-npm run eject
-```
-
-_Note: It is common to `eject` from `create-react-app`. You will lose the ability to get upstream changes from the `create-react-app` project, but it allows for much more fine-grained customization of the project. It will copy the `react-scripts` project dependencies into your project and update scripts in your `package.json`._
-
-#### Step 2: Add Eslint and Prettier
-
-To add `prettier` to your project, run the following command:
+#### Step 1: Install Prettier and ESLint Plugin
 
 ```
-npm i --save-dev eslint eslint-plugin-prettier
+yarn add --dev --exact prettier
+yarn add --dev eslint-plugin-prettier
 ```
 
-#### Step 3: Configure Eslint and Prettier
+#### Step 2: Create the Prettier and ESLint Configuration files
 
 Create a `.eslintrc` file at the root of your project and paste these contents:
 
@@ -71,16 +62,51 @@ If you are not happy with the default Prettier configuration, then create a `.pr
 }
 ```
 
-#### Step 4: Install extensions
+#### Step 3: Install extensions
 
-Your editor likely has extension or plugins for Eslint and Prettier. To make the best of these tools, install the extensions so you can take advantage of auto-code formatting, syntax highlights, etc.
+Your editor likely has extension or plugins for ESLint and Prettier. To make the best of these tools, install the extensions so you can take advantage of auto-code formatting, syntax highlights, etc.
 
 * Atom
-  * [Eslint](https://atom.io/packages/linter-eslint) / [Prettier](https://atom.io/packages/prettier-atom)
+  * [ESLint](https://atom.io/packages/linter-eslint) / [Prettier](https://atom.io/packages/prettier-atom)
 * VSCode
-  * [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) / [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) / [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 * Webstorm
-  * [Eslint](https://www.jetbrains.com/help/webstorm/eslint.html) / [Prettier](https://prettier.io/docs/en/webstorm.html)
+  * [ESLint](https://www.jetbrains.com/help/webstorm/eslint.html) / [Prettier](https://prettier.io/docs/en/webstorm.html)
+
+Each editor's extension for Prettier and ESlint will work a little bit differently.
+
+If you're using VSCode, you can simply right click on any issues and click "Fix this prettier/prettier problem" or click "Fix all auto-fixable problems" (if the option appears).
+
+#### Step 4: Formatting via the Command Line (optional)
+
+Using Prettier is most easily done directly through your code editor using one of the above extensions, however it's also possible to use Prettier via the Command Line interface.
+
+```
+npx prettier --write src/**/*.js
+```
+
+The above command will read in any Javascript file in a `src` directory and overwrite its contents after being formatted through Prettier.
+
+##### Add a Pre-Commit Hook for Prettier
+
+_Note: This is unnecessary if you're already using `precommit-hook-eslint` since we configured eslint to use Prettier._
+
+It's possible to run the prettier formatting pre-commit to ensure no files get committed without following Prettier rules:
+
+```
+yarn add --dev pretty-quick husky
+```
+
+And add the following entry to your package.json:
+
+```
+"husky": {
+  "hooks": {
+    "pre-commit": "pretty-quick --staged"
+  }
+}
+```
+
 
 ## Components
 
@@ -159,9 +185,7 @@ The above component renders first `Hello, Nobody` then immediately re-renders it
 
 #### Default State and Props
 
-ES6 classes have the ability to define methods and properties on class instances. Make use of this when setting up a component by adding `state` and `defaultProps` when you need them, as opposed to setting up state or props in a `constructor`.
-
-This leads to more readability and fewer bugs.
+ES6 classes have the ability to define methods and properties on class instances. Make use of this when setting up a component by adding `state` and `defaultProps` when you need them, as opposed to setting up state or props in a `constructor`. This will lead to more readability and fewer bugs.
 
 ```javascript
 // Bad
