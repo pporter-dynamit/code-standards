@@ -249,4 +249,44 @@ export default class GreetingComponent {
 }
 ```
 
+## Routing
 
+Routing should be achieved using [React Router](https://reacttraining.com/react-router/web/guides/quick-start) using the [react-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) package.
+
+At the time of writing, Create React App does not come with React Router installed, so you must add it manually.
+
+```
+yarn --dev react-router-dom
+```
+
+### Scroll to top
+
+As a best practice for a SPA, ensure users are not stuck at the bottom of a page when navigating Back from a page. To achieve this, see the official docs on [scroll restoration](https://reacttraining.com/react-router/web/guides/scroll-restoration) and implement a `<ScrollToTop />` component in your project.
+
+```
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  render() {
+    return this.props.children;
+  }
+}
+
+export default withRouter(ScrollToTop);
+
+// Then render it at the top of your app, but below Router
+const App = () => (
+  <Router>
+    <ScrollToTop>
+      <App/>
+    </ScrollToTop>
+  </Router>
+)
+```
