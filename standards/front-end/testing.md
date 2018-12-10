@@ -27,7 +27,7 @@ Add Jasmine to your project:
 
 Initialize Jasmine:
 
-`node node_modules/jasmine/bin/jasmine init`
+`node node_modules/jasmine/bin/jasmine init` (or simply `npx jasmine init` for npm version 5.2.0 or later)
 
 Set jasmine as your test script in your package.json:
 
@@ -240,7 +240,7 @@ It’s also very easy to set up and learn in general. Big fan.
 
 **Step 2**. Running Cypress
 
-`./node_modules/.bin/cypress open` (or shortcuts you can create within package.json -- [example: `"cypress:open": "cypress open"`] and then run `npm run cypress:open`)
+`./node_modules/.bin/cypress open` (or shortcuts you can create within package.json -- [example: `"cypress:open": "cypress open"`] and then run `npm run cypress:open`) (or simply `npx cypress open` for npm version 5.2.0 or later)
 
 **Step 3**. Writing a Cypress test
 
