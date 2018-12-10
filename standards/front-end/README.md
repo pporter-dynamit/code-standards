@@ -122,6 +122,7 @@ Include a canonical url tag on each page. Use [trailing slashes](http://googlewe
 * Supported 
   * Desktop: Chrome (latest), Firefox (latest), IE 11, Edge. 
   * Mobile: Chrome/Android 6, Mobile Safari/iOS 10.
+* Write unit/end-to-end/integration tests as needed. [See additional documentation](testing.html).
 
 # Accessibility
 [Full documentation](accessibility.html)

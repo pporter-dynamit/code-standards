@@ -35,6 +35,7 @@
       * [Articles](/standards/front-end/react.md#articles)
       * [Videos](/standards/front-end/react.md#videos)
       * [People with influence](/standards/front-end/react.md#people-with-influence)
+  * [Unit Testing](/standards/front-end/testing.md)
   * [Vue](/standards/front-end/vue.md)
   * [WordPress](/standards/front-end/wordpress.md)
   * [Gulp](/standards/front-end/gulp.md)
